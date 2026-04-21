@@ -15,13 +15,13 @@ df = pd.DataFrame(data)
 fig, axs = plt.subplots(3, 1, figsize=(8, 12))
 
 axs[0].bar(df["Liga"], df["Pendiente"], width=0.5)
-axs[0].set_title("Comparativa de pendientes (Slope)", pad=15)
+axs[0].set_ylabel("Pendiente")
 
 axs[1].bar(df["Liga"], df["Intercepto"], width=0.5)
-axs[1].set_title("Comparativa de interceptos", pad=15)
+axs[1].set_ylabel("Intercepto")
 
 axs[2].bar(df["Liga"], df["R^2"], width=0.5)
-axs[2].set_title("Comparativa de R^2", pad=15)
+axs[2].set_ylabel("R^2")
 
 plt.xticks(rotation=15)   # <-- INCLINAR ETIQUETAS
 plt.tight_layout()
